@@ -1,7 +1,6 @@
-import Carousel from "./Carousel";
+import Carousel from "./carousel";
 import LeftArrow from "./icons/LeftArrow";
 import RightArrow from "./icons/RightArrow";
-import TextWithIcon from "./TextWithIcon";
 
 interface ICarouselContainerProps {
   url: string;
@@ -10,7 +9,7 @@ interface ICarouselContainerProps {
 export const CarouselContainer = ({ url }: ICarouselContainerProps) => {
   return (
     <div className="h-[19.75rem] bg-[#212844] w-full rounded-2xl text-white flex flex-row justify-around items-center">
-      <Carousel.PreviousButton className="bg-white h-[5rem] w-[5rem] flex items-center justify-center rounded-full min-w-[5rem]">
+      <Carousel.PreviousButton className="bg-[#F3F9FB] h-[3rem] w-[3rem] flex items-center justify-center rounded-full min-w-[3rem] border-white border-2">
         <LeftArrow />
       </Carousel.PreviousButton>
 
@@ -21,7 +20,7 @@ export const CarouselContainer = ({ url }: ICarouselContainerProps) => {
         <Carousel.Pagination />
       </div>
       <img className="w-1/3 lg:w-[13.76rem]" src={url}></img>
-      <Carousel.NextButton className="bg-white h-[5rem] w-[5rem] flex items-center justify-center rounded-full min-w-[5rem]">
+      <Carousel.NextButton className="bg-[#F3F9FB] h-[3rem] w-[3rem] flex items-center justify-center rounded-full min-w-[3rem] border-2 border-white">
         <RightArrow />
       </Carousel.NextButton>
     </div>
